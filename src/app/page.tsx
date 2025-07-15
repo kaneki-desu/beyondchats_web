@@ -41,7 +41,7 @@ export default function Home() {
     setLoading(true);
     const username = input.includes('/user/')? input.split('/user/')[1].split(/[/?]/)[0]: input.replace(/^u\//, '');
     console.log(username);
-    const res = await fetch('https://beyondchats-intern.onrender.com//generate-persona/', {
+    const res = await fetch('https://beyondchats-intern.onrender.com/generate-persona/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({"reddit_username": username}),
