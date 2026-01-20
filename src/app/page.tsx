@@ -19,7 +19,7 @@ export default function Home() {
   function extractPersona(raw: string): any {
   try {
     // Step 1: Remove newlines and backslashes
-    let cleaned = raw
+    const cleaned = raw
       .replace(/\n/g, '')       // remove all newline substrings
       .replace(/\\/g, '')       // remove all backslashes
       .replace(/```json/, '')   // remove ```json
@@ -27,7 +27,7 @@ export default function Home() {
       .trim();
 
     // Step 2: Parse the JSON
-    console.log(cleaned);
+    // console.log(cleaned);
     const parsed = JSON.parse(cleaned);
 
     return parsed.persona || parsed;
